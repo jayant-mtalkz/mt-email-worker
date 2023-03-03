@@ -37,18 +37,20 @@ const queuePayLoad2={
                         "email": "kratikakaushik27@gmail.com"
                     }
                 ],
-                "subject":"Wanderlust",
-                "send_at":1677760000
+                "dynamic_template_data":{
+                    "subject":"wanderlust",
+                }
+               // "send_at":1677760000
             },
-            {
-                "to": [
-                    {
-                        "email": "kratikakaushik27@gmail.com"
-                    }
-                ],
-                "subject":"Travel",
+            // {
+            //     "to": [
+            //         {
+            //             "email": "kratikakaushik27@gmail.com"
+            //         }
+            //     ],
+            //     "subject":"Travel",
                 
-            }
+            // }
         ],
         "template_id": "d-3a7d6a0b98584f7e8bcef419a588666f"
 
@@ -57,7 +59,6 @@ const queuePayLoad2={
 }
 
 // worker payload 3
-
 
 const queuePayload3 = {
     "requestid": "kBJCkhdQOd1Zr4s",
@@ -116,11 +117,11 @@ try {
     })
 
     async function addJobs() {
-        await myQueue.add( 'email', queuePayLoad1 )
+      await myQueue.add( 'email', queuePayLoad1 )
         
-        await myQueue.add( 'email', queuePayLoad2 )
+       // await myQueue.add( 'email', queuePayLoad2 )
         
-        await myQueue.add( 'email', queuePayload3 )
+      //  await myQueue.add( 'email', queuePayload3 )
     }
 
     addJobs()

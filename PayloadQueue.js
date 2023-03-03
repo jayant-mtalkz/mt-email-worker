@@ -21,11 +21,11 @@ const queuePayLoad1 = {
         "template_id": "d-e15108ed18544bdaaff63d26d9fce548"
 
     },
-    "channel":"email",
+    "channel": "email",
 }
 
 //worker payload 2
-const queuePayLoad2={
+const queuePayLoad2 = {
     "requestid": "kBJCkhdQOd1Zr4s",
     "apikey": "jxqA2OvBovo6VLRb",
     "data": {
@@ -37,10 +37,10 @@ const queuePayLoad2={
                         "email": "kratikakaushik27@gmail.com"
                     }
                 ],
-                "dynamic_template_data":{
-                    "subject":"wanderlust",
+                "dynamic_template_data": {
+                    "subject": "wanderlust",
                 }
-               // "send_at":1677760000
+                // "send_at":1677760000
             },
             // {
             //     "to": [
@@ -49,13 +49,13 @@ const queuePayLoad2={
             //         }
             //     ],
             //     "subject":"Travel",
-                
+
             // }
         ],
         "template_id": "d-3a7d6a0b98584f7e8bcef419a588666f"
 
     },
-    "channel":"email",
+    "channel": "email",
 }
 
 // worker payload 3
@@ -117,15 +117,15 @@ try {
     })
 
     async function addJobs() {
-      await myQueue.add( 'email', queuePayLoad1 )
-        
-       // await myQueue.add( 'email', queuePayLoad2 )
-        
-      //  await myQueue.add( 'email', queuePayload3 )
+        await myQueue.add('email', queuePayLoad1)
+
+        // await myQueue.add( 'email', queuePayLoad2 )
+
+        //  await myQueue.add( 'email', queuePayload3 )
     }
 
     addJobs()
-    
+
     console.log(`Payload added to queue: ${emailQueue.email}`)
 
 } catch (err) {

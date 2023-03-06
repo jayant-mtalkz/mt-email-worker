@@ -14,6 +14,9 @@ const queuePayLoad1 = {
                 "to": [
                     {
                         "email": "kratikakaushik27@gmail.com"
+                    },
+                    {
+                        "email":"kratikakaushik85@gmail.com"
                     }
                 ]
             }

@@ -4,4 +4,6 @@ const emailQueue = {
     events: "Response-From-Sendgrid",
 }
 
-module.exports = { emailQueue }
+const DefaultTTL = 7 * 24 * 60 * 60
+
+module.exports = { emailQueue ,DefaultTTL}

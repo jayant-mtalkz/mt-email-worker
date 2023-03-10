@@ -15,7 +15,6 @@ try {
       email: eventData.to,
     };
     const chk = await Event.findOne(query);
-
     //console.log("checking collection", chk);
 
     if (chk) {

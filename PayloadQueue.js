@@ -1,5 +1,4 @@
 const { Queue } = require("bullmq");
-
 const { emailQueue } = require("./config/constant");
 const { redisConnection } = require("./config/redisConfig");
 
@@ -50,7 +49,9 @@ const queuePayLoad2 = {
             email: "kratikakaushik27@gmail.com",
           },
         ],
-        subject: "Travel",
+        dynamic_template_data: {
+          subject: "Travel",
+        },
       },
     ],
     template_id: "d-3a7d6a0b98584f7e8bcef419a588666f",
